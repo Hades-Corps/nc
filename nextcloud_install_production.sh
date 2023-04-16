@@ -709,6 +709,8 @@ echo "igbinary.compact_strings=On"
 restart_webserver
 fi
 
+chmod a+x /var/www/nextcloud/occ
+
 # Fix https://github.com/nextcloud/vm/issues/714
 print_text_in_color "$ICyan" "Optimizing Nextcloud..."
 yes | nextcloud_occ db:convert-filecache-bigint
