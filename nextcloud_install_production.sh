@@ -709,7 +709,9 @@ echo "igbinary.compact_strings=On"
 restart_webserver
 fi
 
-chmod a+x /var/www/nextcloud/occ
+sudo apt install git
+sudo chmod a+x /var/www/nextcloud/occ
+sudo git submodule update --init
 
 # Fix https://github.com/nextcloud/vm/issues/714
 print_text_in_color "$ICyan" "Optimizing Nextcloud..."
